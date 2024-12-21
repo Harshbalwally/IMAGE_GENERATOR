@@ -2,14 +2,12 @@ import React from 'react';
 import styled from 'styled-components';
 
 const Container = styled.div`
-  cc`
+  height : 100%;
+  overflow-y: scroll;
+  `;
 
 const Home = () => {
-  return (
-    <div>
-      
-    </div>
-  )
-}
+  return <Container>Home</Container>
+};
 
 export default Home
