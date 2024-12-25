@@ -26,9 +26,16 @@ const SearchBar = ({ search, handleChange }) => {
         style={{
           border: "none",
           outline: "none",
+          justifyContent: "center",
+          alignItems: "center", /* Centers vertically */
+          display: "flex", /* Ensures flexbox layout */
           width: "100%",
-          background: "inherit",
           color: "inherit",
+          fontSize: "16px",
+          background: "transparent",
+         
+          margin: "0 auto", /* Centers horizontally */
+        
         }}
         value={search}
         onChange={(e) => handleChange(e)}
