@@ -47,7 +47,7 @@ const Wrapper = styled.div`
 const CardWrapper = styled.div`
    display: grid;
    gap : 20px;
-   @media(max-width: 1200px) {
+   @media(min-width: 1200px) {
    grid-template-columns: repeat(4,1fr)
    }
     @media(min-width: 640px) and (max-width: 1199px) {
@@ -58,6 +58,11 @@ const CardWrapper = styled.div`
    }
 `;
 const Home = () => {
+  const item ={
+    photo:"",
+    author:"",
+    prompt:"",
+  }
   return <Container>
     <Headline>explore popular posts in community!
         <Span>⦿Generated with AI⦿</Span>
@@ -65,7 +70,8 @@ const Home = () => {
    <SearchBar/>
    <Wrapper>
     <CardWrapper>
-      <ImageCard/>
+      <ImageCard item={item}/>
+   
     </CardWrapper>
    </Wrapper>
 </Container>
