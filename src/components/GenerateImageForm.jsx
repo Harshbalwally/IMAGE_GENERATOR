@@ -1,5 +1,9 @@
+
 import React from 'react'
 import styled from 'styled-components'
+import Button from './buttons/Button';
+import TextInput from './input/TextInput';
+import { AutoAwesome, CreateRounded } from '@mui/icons-material';
 
 const Form = styled.div`
    flex: 1;
@@ -46,8 +50,19 @@ const GenerateImageForm = () => {
             Write your prompt according to the image you want
         </Desc>
     </Top>
-    <Body>body</Body>
-   <Actions>action</Actions> 
+    <Body>
+        <TextInput label="Author" placeholder="Enter your name.." name="name"/>
+        <TextInput label="Image Prompt" placeholder="Write detailed prompt about the image " 
+        name="name"
+        rows="8"
+        textArea
+        />
+        ** You can post the AI Generated Image to the Community **
+    </Body>
+   <Actions>
+    <Button text="Generate Image" flex leftIcon={<AutoAwesome/>}/>
+    <Button text="Post Image" flex type="secondary" leftIcon={<CreateRounded/>}/>
+    </Actions> 
   </Form>
 }
 
